@@ -1,0 +1,16 @@
+{
+  "name": "recallish",
+  "description": "Local-first personal AI memory layer with semantic search and persistent storage",
+  "version": "0.1.0",
+  "command": "python",
+  "args": [
+    "-m",
+    "recallish.mcp_server",
+    "--config",
+    "/ABSOLUTE/PATH/TO/backend/config/recallish.yaml"
+  ],
+  "env": {
+    "OPENAI_API_KEY": "YOUR_API_KEY_HERE",
+    "OPENAI_BASE_URL": "https://api.openai.com/v1"
+  }
+}

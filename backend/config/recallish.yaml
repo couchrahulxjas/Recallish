@@ -1,0 +1,43 @@
+storage:
+  data_dir: ./.recallish-store
+  collection_name: memories
+  conversations_log: conversations.jsonl
+
+dedup:
+  similarity_threshold: 0.86
+
+scoring:
+  explicit_signal_weight: 0.65
+  recency_weight: 0.2
+  access_weight: 0.1
+  category_weight: 0.05
+  category_weights:
+    preference: 1.0
+    project_fact: 0.9
+    decision: 0.9
+    profile: 0.8
+    misc: 0.5
+
+ranking:
+  strategy: multiplicative
+  similarity_weight: 1.0
+  importance_weight: 1.0
+  recency_weight: 1.0
+  recency_decay_per_day: 0.01
+  exclude_superseded: true
+
+decay:
+  decay_per_day: 0.01
+  min_importance: 0.1
+  idle_days_before_decay: 7
+
+retrieval:
+  candidate_multiplier: 4
+
+llm:
+  enabled: false
+  summarize_enabled: true
+  api_key: "local"
+  base_url: "http://127.0.0.1:8080/v1"
+  model: "Qwen3-1.7B-Q4_K_M"
+  timeout: 120

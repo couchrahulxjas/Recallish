@@ -1,0 +1,5 @@
+[console_scripts]
+recallish = recallish.cli:main
+recallish-api = recallish.http_api:run
+recallish-fastapi = recallish.fastapi_server:run
+recallish-mcp = recallish.mcp_server:run

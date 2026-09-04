@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "recallish": {
+      "command": "REPLACE_WITH_REPO/backend/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "recallish.mcp_server",
+        "--config",
+        "REPLACE_WITH_REPO/backend/config/recallish.yaml"
+      ]
+    }
+  }
+}

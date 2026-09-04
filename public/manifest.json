@@ -1,0 +1,133 @@
+{
+  "manifest_version": 3,
+  "name": "Recallish - Universal AI Memory",
+  "version": "0.1.0",
+  "description": "Move AI conversations between ChatGPT, Claude, Gemini, Grok, and Perplexity while keeping your data local",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Recallish - Universal AI Memory",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*",
+    "http://localhost:8765/*",
+    "*://chat.openai.com/*",
+    "*://chatgpt.com/*",
+    "*://claude.ai/*",
+    "*://gemini.google.com/*",
+    "*://bard.google.com/*",
+    "*://chat.deepseek.com/*",
+    "*://chat.qwen.ai/*",
+    "*://chat.qwenlm.ai/*",
+    "*://tongyi.aliyun.com/*",
+    "*://cursor.com/*",
+    "*://*.cursor.sh/*",
+    "*://grok.com/*",
+    "*://x.com/i/grok/*",
+    "*://perplexity.ai/*",
+    "*://www.perplexity.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://chat.openai.com/*",
+        "*://chatgpt.com/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://claude.ai/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://gemini.google.com/*",
+        "*://bard.google.com/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://chat.deepseek.com/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://chat.qwen.ai/*",
+        "*://chat.qwenlm.ai/*",
+        "*://tongyi.aliyun.com/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://cursor.com/*",
+        "*://*.cursor.sh/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://grok.com/*",
+        "*://x.com/i/grok/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://perplexity.ai/*",
+        "*://www.perplexity.ai/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://127.0.0.1:8765 http://localhost:8765"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
