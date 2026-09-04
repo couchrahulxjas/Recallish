@@ -4,6 +4,24 @@ Recallish is a local-first AI memory system for capturing conversations, extract
 
 The goal is simple: keep important project context available after a conversation ends, without requiring a hosted database or sending your entire memory store to a third party.
 
+## Screenshots
+
+### Recallish dashboard
+
+![Recallish dashboard](docs/images/Screenshot%202026-09-04%20095653.png)
+
+### Memory search
+
+![Memory search](docs/images/Screenshot%202026-09-04%20095701.png)
+
+### Memory details
+
+![Memory details](docs/images/Screenshot%202026-09-04%20095715.png)
+
+### Conversation capture
+
+![Conversation capture](docs/images/Screenshot%202026-09-04%20095731.png)
+
 ## What Recallish does
 
 AI conversations are useful, but important decisions and project context are often trapped inside one chat session. Recallish provides a local memory layer that keeps that context available across conversations, AI providers, and developer tools.
