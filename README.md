@@ -1,3 +1,9 @@
+# Recallish
+
+Recallish is a local-first AI memory system for capturing conversations, extracting useful facts, and retrieving context across chats, models, and developer tools. It combines a Python memory engine, a React web inspector, an optional browser extension, and MCP integrations for AI assistants.
+
+The goal is simple: keep important project context available after a conversation ends, without requiring a hosted database or sending your entire memory store to a third party.
+
 ## What Recallish does
 
 AI conversations are useful, but important decisions and project context are often trapped inside one chat session. Recallish provides a local memory layer that keeps that context available across conversations, AI providers, and developer tools.
